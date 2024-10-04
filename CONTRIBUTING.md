@@ -9,7 +9,7 @@ Thank you for your interest in contributing to our project! We are excited to co
 2. **Clone your fork**:
    ```bash
    git clone https://github.com/HarshSharmaIN/Python-Projects.git
-   cd Web-Dev-Hub
+   cd Python-Projects
    ```
 3. **Create a new branch**:
    ```bash
