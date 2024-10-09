@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shuttle | Signup</title>
+    <link rel="icon" href = "https://png.pngtree.com/element_our/20190528/ourlarge/pngtree-cartoon-flat-minimalistic-sport-badminton-hobby-icon-image_1185705.jpg" type="image/jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+      body, html {
+        height: 100%;
+      }
+
+      .bg {
+        /* The image used */
+        background-image: url('https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <img src="https://png.pngtree.com/element_our/20190528/ourlarge/pngtree-cartoon-flat-minimalistic-sport-badminton-hobby-icon-image_1185705.jpg" class="logo" height="50" width="50">
+          <a class="navbar-brand" href="/" style="color:#D35400 "><strong>SHUTTLE</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/homepage">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/racquets"><b>Rackets</b></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/shuttle"><b>Shuttles</b></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/shoes"><b>Shoes</b></a>
+              </li>
+
+
+              <!-- <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  All Categories
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/signin" style="color:#3498DB"><b>Sign in</b></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/signup" style="color:#58D68D "><b>Sign Up</b></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit"><b>Search</b></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class = "container mt-4">
+          <form action ="/signup" method = "post">
+              <div class="mb-3">
+                <label for="inputName" class="form-label">Name</label>
+                <input type="name" name = "inputName" class="form-control" id="inputName" placeholder="First Name" required autofocus>
+              </div>
+              <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email address</label>
+                <input type="email" name = "inputEmail" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="E-mail" required autofocus>
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input type="password" name = "inputPassword" class="form-control" id="inputPassword" placeholder="Password" required>
+                <div id="emailHelp" class="form-text">Password should be at least 8 characters long.</div>
+              </div>
+              <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+      </div>
+    </div>  
+  </body>
+</html>
