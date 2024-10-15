@@ -27,6 +27,6 @@ num = int(input("Enter a number: "))
 
 # Checking if the number is prime
 if is_prime(num):
-    print(num, "is a prime number.")
+    print(num, "Is a prime number.")
 else:
-    print(num, "is not a prime number.")
+    print(num, "Is not a prime number.")
