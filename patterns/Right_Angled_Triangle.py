@@ -10,7 +10,7 @@ Output:
 * *
 * * *
 * * * *
-* * * * *
+* * * * * 
 
 The Code is as Follows:
 '''
