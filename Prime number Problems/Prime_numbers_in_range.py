@@ -48,7 +48,7 @@ def find_primes(a, b):
 a = int(input())
 b = int(input())
 primes = find_primes(a, b)
-print("Prime numbers between", a, "and", b, primes)
+print("Prime numbers between: ", a, "and", b, primes)
 
 
 
