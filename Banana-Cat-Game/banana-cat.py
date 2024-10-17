@@ -6,7 +6,7 @@ import os
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.transform.rotozoom(pygame.image.load(os.path.join('banana-cat', 'assets', 'images', 'cat.png')).convert_alpha(), 0, 3)
+        self.image = pygame.transform.rotozoom(pygame.image.load(os.path.join('Banana-Cat-Game', 'assets', 'images', 'cat.png')).convert_alpha(), 0, 3)
         self.rect = self.image.get_rect(midbottom = (100, 300))
         self.gravity = 0
         self.jump_strength = 16  
@@ -31,12 +31,12 @@ class Obstacle(pygame.sprite.Sprite):
     def __init__(self, type):
         super().__init__()
         if type == 'bird': 
-            bird1 = pygame.transform.scale2x(pygame.image.load(os.path.join('banana-cat', 'assets', 'images', 'bird1.png'))).convert_alpha()
-            bird2 = pygame.transform.scale2x(pygame.image.load(os.path.join('banana-cat', 'assets', 'images', 'bird2.png'))).convert_alpha()
+            bird1 = pygame.transform.scale2x(pygame.image.load(os.path.join('Banana-Cat-Game', 'assets', 'images', 'bird1.png'))).convert_alpha()
+            bird2 = pygame.transform.scale2x(pygame.image.load(os.path.join('Banana-Cat-Game', 'assets', 'images', 'bird2.png'))).convert_alpha()
             self.frames = [bird1, bird2]
             y_pos = 210
         else:
-            banana = pygame.transform.scale2x(pygame.image.load(os.path.join('banana-cat', 'assets', 'images', 'banana.png')).convert_alpha())
+            banana = pygame.transform.scale2x(pygame.image.load(os.path.join('Banana-Cat-Game', 'assets', 'images', 'banana.png')).convert_alpha())
             self.frames = [banana]
             y_pos = 325
 
@@ -64,7 +64,7 @@ class Obstacle(pygame.sprite.Sprite):
 class Reward(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load(os.path.join('banana-cat', 'assets', 'images', 'fish.png')).convert_alpha()
+        self.image = pygame.image.load(os.path.join('Banana-Cat-Game', 'assets', 'images', 'fish.png')).convert_alpha()
         self.rect = self.image.get_rect(midbottom = (randint(820, 1000), 320)) 
         self.mask = pygame.mask.from_surface(self.image)
         self.speed = 5
@@ -114,7 +114,7 @@ screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption("Banana Cat")
 
 clock = pygame.time.Clock()
-test_font = pygame.font.Font(os.path.join('banana-cat', 'assets', 'font', 'Pixeltype.ttf'), 24)
+test_font = pygame.font.Font(os.path.join('Banana-Cat-Game', 'assets', 'font', 'Pixeltype.ttf'), 24)
 
 game_active = False
 start_time = 0
@@ -128,10 +128,10 @@ player.add(Player())
 obstacle_grp = pygame.sprite.Group()
 reward_grp = pygame.sprite.Group()
 
-sky_surf = pygame.image.load(os.path.join('banana-cat', 'assets', 'images', 'sky.png')).convert()
-ground_surf = pygame.image.load(os.path.join('banana-cat', 'assets', 'images', 'ground.png')).convert()
+sky_surf = pygame.image.load(os.path.join('Banana-Cat-Game', 'assets', 'images', 'sky.png')).convert()
+ground_surf = pygame.image.load(os.path.join('Banana-Cat-Game', 'assets', 'images', 'ground.png')).convert()
 
-cat_surf = pygame.transform.rotozoom(pygame.image.load(os.path.join('banana-cat', 'assets', 'images', 'cat.png')).convert_alpha(), 0, 6)
+cat_surf = pygame.transform.rotozoom(pygame.image.load(os.path.join('Banana-Cat-Game', 'assets', 'images', 'cat.png')).convert_alpha(), 0, 6)
 cat_gamescreen_rect = cat_surf.get_rect(center=(400, 200))
 
 game_name = test_font.render('Banana Cat', False, 'Black')
