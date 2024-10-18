@@ -1,0 +1,17 @@
+def generate_fibonacci_series(N):
+    s="0"
+    if N==1:
+        print(s)
+        return
+    if N==2:
+        print("0 1")
+        return
+    s="0 1"
+    sec_last=0
+    last_t=1
+    for i in range(3,N+1):
+        curr=last_t+sec_last
+        s=s+" "+str(curr)
+        sec_last=last_t
+        last_t=curr
+    print(s)
