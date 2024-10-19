@@ -1,0 +1,11 @@
+def isArmstrong(N):
+    d=list(map(int,str(N)))
+    v=len(d)
+    e=0
+    for a in d:
+        c=a**v
+        e+=c     
+    if N==e:
+        return True
+    else:
+        return False
