@@ -1,0 +1,13 @@
+def find_strong_numbers_in_range(a, b):
+    for i in range(a,b+1):
+        count=0
+        v=i
+        while v!=0:
+            fact=1
+            last_num=v%10
+            for k in range(1,last_num+1):
+                fact*=k
+            v//=10
+            count+=fact
+        if count==i:
+            print(i)
