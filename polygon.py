@@ -1,10 +1,17 @@
-from turtle import setup, speed, pencolor, penup, pendown, left, forward, exitonclick
+"""
+A turtle graphics python 3 program .
+Author: Sajith Minrutha
+
+"""
+
+from turtle import setup, speed, pencolor, penup, pendown, left, forward, exitonclick ,textinput , numinput
 
 # Assign canvas and shape size
-canvas_size = 300
-sides = 3  #edit the number of sides
+canvas_size = numinput("canvas size","Enter the canvas size:")
+sides = numinput("sides","Enter the number of sides:")
 side_length = 2 / sides * canvas_size
-
+turn_angle= 360/sides
+color = textinput("colour","Enter the colour of your polygon:") 
 # Set the window size and turtle speed
 setup(canvas_size, canvas_size)
 speed(1)
@@ -16,11 +23,11 @@ forward(canvas_size / 3)
 left(150)
 
 # Draw a blue polygon
-pencolor("blue")
+pencolor(color)
 pendown()
-for side in range(int(sides)): 
+for side in range(int(sides)):
     forward(side_length)
-    left(120)
+    left(turn_angle)
 
 # Finished!
 exitonclick()
