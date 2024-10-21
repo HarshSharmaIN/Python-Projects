@@ -1,0 +1,11 @@
+def swap_first_last(num):
+    last_digit=num%10
+    first_digit=num
+    x=1
+    while first_digit>=10:
+        first_digit//=10
+        x*=10
+    y=num-first_digit*x
+    z=y//10
+    final=last_digit*x+z*10+first_digit
+    return final
