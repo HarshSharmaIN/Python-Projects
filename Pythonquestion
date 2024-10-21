@@ -1,0 +1,33 @@
+Question:Anubhav and Gaurav are supposed to take competitive programming classes, but their students went to play Garba, leaving them bored. To pass the time, they decided to play  several rounds of a game of coins.
+
+In each round, they play with N coins, a player can remove any number of coins between 1 and X (inclusve). Anubhav goes first. The player who cannot make a move loses the game.
+
+They will play a total of T rounds, and you need to determine who wins each round. Note that both players play optimally.
+Input
+The first line consists of a single Integer T denoting the number of rounds.
+For each round we have two space separated integers N and X.
+
+0<=T<=20
+0<=N, X<=108
+Output
+For each round print Anubhav wins if Anubhav is going to win the game or Gaurav wins if Gaurav is going to win the game.
+Example
+Input:
+2
+1 1
+3 2
+
+Output:
+Anubhav wins
+Gaurav wins
+
+
+Code for the question:
+T=int(input())
+for i in range(1,T+1):
+    N,X=map(int,input().split())
+    
+    if N%(X+1)==0:
+        print("Gaurav wins")
+    else:
+        print("Anubhav wins")
