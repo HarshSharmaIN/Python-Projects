@@ -15,12 +15,16 @@ Code:
 '''
 
 def is_prime(number): #defining a function
-    if number <= 1:
+    if number < 2: # No number is prime if its less than 2
         return False
-    for i in range(2, int(number**0.5) + 1): #The code checks the range between 1,square root of the number.
-        if number % i == 0: 
-            return False
-    return True
+    elif number==2: # Since 2 is the only prime number we have to check for it before
+        return True
+    else:
+        for i in range(2, int(number**0.5) + 1): #The code checks the range between 1,square root of the number.
+            if number % i == 0: 
+                return False
+        return True
+    
 
 # Input from the user
 num = int(input("Enter a number: "))
