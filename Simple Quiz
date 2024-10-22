@@ -1,0 +1,44 @@
+def display_questions(questions):
+    score = 0
+    for question in questions:
+        print(question["question"])
+        for index, option in enumerate(question["options"], start=1):
+            print(f"{index}. {option}")
+        
+        answer = input("Choose the correct option (1-4): ")
+        
+        if int(answer) - 1 == question["answer"]:
+            print("Correct!")
+            score += 1
+        else:
+            print(f"Wrong! The correct answer was: {question['options'][question['answer']]}")
+    
+    return score
+
+def main():
+    questions = [
+        {
+            "question": "What is the capital of France?",
+            "options": ["Berlin", "Madrid", "Paris", "Rome"],
+            "answer": 2
+        },
+        {
+            "question": "What is 2 + 2?",
+            "options": ["3", "4", "5", "6"],
+            "answer": 1
+        },
+        {
+            "question": "Which planet is known as the Red Planet?",
+            "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+            "answer": 1
+        },
+        {
+            "question": "Who wrote 'Romeo and Juliet'?",
+            "options": ["Charles Dickens", "Mark Twain", "William Shakespeare", "Leo Tolstoy"],
+            "answer": 2
+        },
+    ]
+    
+    print("Welcome to the Quiz!")
+    score = display_questions(questions)
+    print(f"\nYour final score is: {score}/{len(questions)}")
