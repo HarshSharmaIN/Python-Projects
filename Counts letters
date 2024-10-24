@@ -1,0 +1,29 @@
+def count_characters(input_string):
+    upper_count = 0
+    lower_count = 0
+    digit_count = 0
+    space_count = 0
+
+    for char in input_string:
+        if char.isupper():
+            upper_count += 1
+        elif char.islower():
+            lower_count += 1
+        elif char.isdigit():
+            digit_count += 1
+        elif char.isspace():
+            space_count += 1
+
+    return upper_count, lower_count, digit_count, space_count
+
+def main():
+    user_input = input("Enter a string: ")
+    upper, lower, digits, spaces = count_characters(user_input)
+
+    print(f"Uppercase letters: {upper}")
+    print(f"Lowercase letters: {lower}")
+    print(f"Digits: {digits}")
+    print(f"Spaces: {spaces}")
+
+if __name__ == "__main__":
+    main()
