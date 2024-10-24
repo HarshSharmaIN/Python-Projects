@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Navigation Bar</title>
+    <style>
+        /* Styling for demonstration */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffd700; /* Change the color on hover */
+        }
+        /* Content styling */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#section1" class="scroll">Section 1</a></li>
+            <li><a href="#section2" class="scroll">Section 2</a></li>
+            <li><a href="#section3" class="scroll">Section 3</a></li>
+        </ul>
+    </nav>
+
+    <section id="section1">
+        <h2>Section 1</h2>
+        <p>This is the content of section 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+        <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+        <p>Aliquam auctor, ligula eget fermentum iaculis, eros orci fringilla mauris, sed cursus ante dapibus diam. Sed nisi.</p>
+        <!-- Additional Lorem Ipsum paragraphs -->
+        <p>Ut pellentesque, mauris sed suscipit mollis, turpis diam lacinia libero, ac vehicula quam turpis eu nisi. Vivamus rhoncus, odio in gravida placerat, eros nibh sollicitudin turpis, non ultricies libero elit ac turpis. Praesent vel risus vitae odio tempor vestibulum vel nec risus.</p>
+        <p>Curabitur eleifend ligula a leo lobortis pretium. Duis scelerisque metus et nisi blandit, eget luctus est vehicula. Maecenas non nisl vestibulum, molestie nisl vel, tristique mauris. Morbi efficitur mi sit amet elit semper, ut molestie lorem ultricies.</p>
+        <p>Sed vitae ex nec ante consequat rhoncus. In hac habitasse platea dictumst. Vivamus eget velit non arcu cursus placerat. Maecenas eget accumsan libero.</p>
+        <p>Donec consectetur quam ac fermentum accumsan. Aliquam erat volutpat. Proin posuere neque non nunc scelerisque interdum. Phasellus non sapien vel purus congue interdum. Nulla a massa vel velit pharetra pharetra a id massa.</p>
+    </section>
+
+    <section id="section2">
+        <h2>Section 2</h2>
+        <p>This is the content of section 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+        <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+        <p>Aliquam auctor, ligula eget fermentum iaculis, eros orci fringilla mauris, sed cursus ante dapibus diam. Sed nisi.</p>
+        <!-- Additional Lorem Ipsum paragraphs -->
+        <p>Vivamus ut nulla nec nulla ullamcorper aliquam. Fusce nec augue non lectus condimentum dignissim. Mauris nec sapien consequat, ullamcorper turpis eu, facilisis libero. Cras luctus vehicula metus.</p>
+        <p>Cras condimentum nulla quis nisi aliquam, a aliquet felis convallis. Fusce eget bibendum lacus, sed rutrum lectus. Nulla efficitur justo in tortor rutrum, nec tincidunt leo hendrerit.</p>
+        <p>Proin condimentum erat sed purus sollicitudin, eget dapibus risus tincidunt. Maecenas ultricies quam vel nulla dictum tempor. Suspendisse potenti. Morbi vitae ex ac purus aliquet tempus.</p>
+        <p>Quisque nec sapien vitae nunc faucibus interdum. Duis vulputate orci et dolor lobortis efficitur. Mauris semper, arcu non tristique vestibulum, ex quam consequat orci, vel pellentesque ex risus vel libero.</p>
+    </section>
+
+    <section id="section3">
+        <h2>Section 3</h2>
+        <p>This is the content of section 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+        <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+        <p>Aliquam auctor, ligula eget fermentum iaculis, eros orci fringilla mauris, sed cursus ante dapibus diam. Sed nisi.</p>
+        <!-- Additional Lorem Ipsum paragraphs -->
+        <p>Quisque vehicula, libero in faucibus posuere, sapien risus consectetur lorem, at rhoncus libero leo ut risus. In ut tempor odio, non fringilla odio. Pellentesque pharetra eros magna, nec scelerisque nibh aliquam in.</p>
+        <p>Maecenas nec velit in elit ultricies congue vel vel libero. Praesent aliquam, justo non sollicitudin feugiat, odio urna vestibulum libero, id scelerisque nunc metus vel odio. Curabitur tempus nisi justo, ut bibendum risus hendrerit quis.</p>
+        <p>Nam vehicula risus eget est tempus, in molestie justo tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed finibus, magna non faucibus rhoncus, turpis tortor iaculis arcu, at gravida elit odio ac velit.</p>
+        <p>Fusce eu eros interdum, tristique mi non, rutrum odio. Mauris vitae lorem eget magna sodales eleifend. Sed malesuada dolor a diam pharetra laoreet. Nulla facilisi. Suspendisse potenti.</p>
+    </section>
+
+    <script>
+        document.querySelectorAll('.scroll').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetPosition = document.querySelector(targetId).offsetTop;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = 1000; // milliseconds
+
+                let start = null;
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    const progress = timestamp - start;
+                    window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+                    if (progress < duration) {
+                        window.requestAnimationFrame(step);
+                    }
+                }
+                window.requestAnimationFrame(step);
+            });
+        });
+
+        // Easing function
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        };
+    </script>
+</body>
+</html>
