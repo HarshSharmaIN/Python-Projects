@@ -1,0 +1,12 @@
+def start_game():
+    print("You are in a dark room. There are doors to your left and right.")
+    choice = input("Do you want to go left or right? ").lower()
+    
+    if choice == "left":
+        print("You found a treasure!")
+    elif choice == "right":
+        print("You encountered a monster!")
+    else:
+        print("Invalid choice. Game over!")
+
+start_game()
