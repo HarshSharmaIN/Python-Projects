@@ -1,13 +1,18 @@
-'''
+
+'''Player:1 Is "X"
+   Player:2 Is "O"'''
+=======
+
 Player1's symbol is "X" 
 Player2's symbol is "O"
 
 The player's should give a input which is any one number which is available in the grid . 
 so that at the position at which that number exists will be updated with the player's symbol.
-'''
 
 
 
+
+>
 
 board = [
          ['0','1','2'],
@@ -22,15 +27,24 @@ def print_board():
 
 def p1():
 
+
+  n = int(input("Jeevan's_move.  "))
+  row = n//3
+
   n = int(input("Player1's_move.  "))
   row = n//3 
+
   column = n%3
   board[row][column]="X"
   print_board()
 
 def p2():
 
+
+  n = int(input("Thrishul's_move.  "))
+
   n = int(input("Player2's_move.  "))
+
   row = n//3
   column = n%3
   board[row][column]="O"
@@ -77,7 +91,11 @@ for i in range(5):
   a = end()
   if a=="X":
     print("Game Ended")
+
+    print("Jeevan won")
+
     print("Player1 won")
+
     break
   if count==9:
     print("draw")
@@ -88,5 +106,10 @@ for i in range(5):
   a = end()
   if a=="O":
     print("Game Ended")
+
+    print("Thrishul won")
+    break
+
     print("Player2 won")
     break
+
