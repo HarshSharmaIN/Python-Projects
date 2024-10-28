@@ -1,0 +1,42 @@
+1. Importing the required Libraries and Modules:
+# import the time module
+from threading import Timer
+import time
+import tkinter as tk
+from tkinter import *
+from datetime import datetime
+
+2. Creating the GUI window (Labels, Button and Entry Field):
+#creating a window
+window = Tk()
+window.geometry('600x600')#giving size
+window.title('PythonGeeks')#giving title
+head=Label(window, text="Countdown Clock and Timer", font=('Calibri 15'))# a label
+head.pack(pady=20)
+
+3. Displaying the current time
+#to print current time
+now = datetime.now()
+current_time = now.strftime("%H:%M:%S")
+Label(window,text=current_time).pack()
+
+4. Creating the Timer and Countdown Function
+def countdown():
+    t=count.get()
+    while t:
+        mins, secs = divmod(t, 60)
+        display = ('{:02d}:{:02d}'.format(mins, secs))
+        time.sleep(1)#sleep time 1 sec
+        t -= 1
+        Label(window,text= display).pack()
+     
+    Label(window,text="Time-Up",font=('bold', 20)).place(x=250,y=290)
+
+5. Adding Desktop Notification
+#display notification on desktop
+    toast = ToastNotifier()#create toast variable
+    toast.show_toast("Notification","Timer is Off",duration = 20,icon_path = NONE,threaded = True,)#show toast
+
+6. Adding a Beep Sound
+if (check.get()==True):#if the value of check is true    
+            winsound.Beep(440, 1000)#beep sound
