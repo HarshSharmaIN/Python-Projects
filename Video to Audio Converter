@@ -1,0 +1,40 @@
+Steps to Build Python Video to Audio Converter Project
+
+1. Importing the modules
+import moviepy.editor
+from tkinter.filedialog import *
+from tkinter import *
+
+2. Creating the GUI Window
+window=Tk()
+# Set the size of the tkinter window
+window.geometry("700x350")
+window.title("PythonGeeks")#give title to the window
+Label(window, text="VIDEO TO AUDIO CONVERTER",bg='orange', font=('Calibri 15')).pack()# a label
+Label(window, text="Choose a File ").pack()
+
+3. Browse Function
+def browse():#browsing function
+    global video#global variable
+    video = askopenfilename()
+    video = moviepy.editor.VideoFileClip(video)
+    pathlab.config(text=video)#configure method
+
+- Tk() – is a method that helps us create a blank GUI window.
+- geometry() – is a method that helps us fix the size of the GUI Window.
+- title() – is a method that helps us fix the title of the GUI Window.
+- Label() – is a method that helps us create a widget to display text on the GUI WIndow.
+
+pathlab = Label(window)
+pathlab.pack()
+#creating buttons
+Button(window,text='browse',command=browse).pack()
+Button(window,text='SAVE',command=save).pack()
+
+- Button() – is a method that helps us create a button on the GUI Window.
+
+4. Save Function
+def save():
+    audio = video.audio#convert to audio
+    audio.write_audiofile("sample.wav")#save as audio
+    Label(window, text="Video Converted into Audio and Saved Successfully",bg='blue', font=('Calibri 15')).pack()# a label
